@@ -1,0 +1,12 @@
+parameter:Statement a owl:Class ;
+    rdfs:label
+        "Statement"@en ,
+        "Statement"@de ;
+    skos:definition
+        "Class of a statement."@en ,
+        "Klasse eines Statements."@de ;
+    rdfs:subClassOf rdf:Statement ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2021-05-12" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

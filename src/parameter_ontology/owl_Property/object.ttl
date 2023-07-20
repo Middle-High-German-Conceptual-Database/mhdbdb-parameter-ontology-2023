@@ -1,0 +1,14 @@
+parameter:object a owl:ObjectProperty ;
+    rdfs:label
+        "object"@en ,
+        "object"@de ;
+    skos:definition
+        "object of a statement."@en ,
+        "object eines statement."@de ;
+    rdfs:domain parameter:Statement ;
+    rdfs:range xsd:anyURI ;
+    rdfs:subPropertyOf rdf:object ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2021-05-12" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

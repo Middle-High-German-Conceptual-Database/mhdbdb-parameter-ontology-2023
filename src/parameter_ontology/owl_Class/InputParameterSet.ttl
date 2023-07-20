@@ -1,0 +1,12 @@
+parameter:InputParameterSet a owl:Class ;
+    rdfs:subClassOf parameter:ParameterSet ;
+    rdfs:label
+        "Input parameter set"@en ,
+        "Parameterset Input"@de ;
+    skos:definition
+        "A set of parameters to be used as input."@en ,
+        "Ein Satz von Parametern, der als Input fungiert."@de ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2021-07-20" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

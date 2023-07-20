@@ -1,0 +1,13 @@
+parameter:dhpUri a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:label
+        "dhplus uri"@en ,
+        "dhplus Uri"@de ;
+    skos:definition
+        "Uri of the dhplus instance to infer."@en ,
+        "Uri der dhplus-Instanz, die generiert werden soll."@de ;
+    rdfs:domain parameter:InstanceParameter ;
+    rdfs:range xsd:anyURI ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2021-05-12" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

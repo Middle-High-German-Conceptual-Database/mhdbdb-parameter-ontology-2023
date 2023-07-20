@@ -1,0 +1,13 @@
+parameter:hasParameter a owl:ObjectProperty ;
+    rdfs:label
+        "has parameter"@en ,
+        "hat Parameter"@de ;
+    skos:definition
+        "Points to the parameters of a parameter set."@en ,
+        "Zeigt auf die Parameter eines Parametersatzes."@de ;
+    rdfs:domain parameter:ParameterSet ;
+    rdfs:range parameter:Parameter ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2021-05-12" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

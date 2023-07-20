@@ -1,0 +1,33 @@
+dhpluso:ValidationParameterSet a sh:NodeShape ;
+    sh:property [
+            sh:path parameter:hasParameter ;
+            sh:class parameter:Parameter ;
+            sh:minCount 1 ;
+            sh:severity sh:Violation ;
+        ] ,
+        [
+            sh:path parameter:filterLanguage ;
+            sh:datatype xsd:language ;
+            sh:severity sh:Violation ;
+        ] ,
+        [
+            sh:path dc:creator ;
+            sh:or (
+                [sh:datatype xsd:string ;]
+                [sh:class dhpluso:Person ;]
+            ) ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:severity sh:Violation ;
+        ] ,
+        [
+            sh:path dcterms:created ;
+            sh:datatype xsd:dateTime ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:severity sh:Violation ;
+        ] ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2021-09-09" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

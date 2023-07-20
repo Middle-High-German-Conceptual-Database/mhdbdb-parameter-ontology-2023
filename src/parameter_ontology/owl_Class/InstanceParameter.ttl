@@ -1,0 +1,9 @@
+parameter:InstanceParameter a owl:Class ;
+    rdfs:subClassOf parameter:Parameter ;
+    rdfs:label
+        "Instance parameter"@en ,
+        "Instanz Parameter"@de ;
+    skos:definition
+        "Class of an instance parameter, used to define the infer process of one instance."@en ,
+        "Klasse eines Instanzparameters, die verwendet wird, um den Generiegungsprozess einer Instanz zu definieren."@de ;
+.

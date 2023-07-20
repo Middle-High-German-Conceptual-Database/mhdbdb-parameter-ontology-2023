@@ -1,0 +1,500 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://dh.plus.ac.at/parameter-ontology#"
+     xml:base="https://dh.plus.ac.at/parameter-ontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://dh.plus.ac.at/parameter-ontology">
+        <owl:versionIRI rdf:resource="https://dh.plus.ac.at/parameter-ontology/0-1#"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <dc:rights rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <dc:title xml:lang="de">dhPLUS SHACL Parameter Ontologie</dc:title>
+        <dc:title xml:lang="en">dhPLUS SHACL Parameter Ontology</dc:title>
+        <terms:created>2021-05-12</terms:created>
+        <terms:modified>2021-09-16+13:18</terms:modified>
+        <rdfs:label xml:lang="de">dhPLUS SHACL Parameter Ontologie</rdfs:label>
+        <rdfs:label xml:lang="en">dhPLUS SHACL Parameter Ontology</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-12</owl:versionInfo>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <skos:definition xml:lang="de">Dies ist eine Ontologie, die verwendet wird, um Parametersätze zu spezifizieren, die vom shacl-Infer-Prozess in dhPLUS verwendet werden.</skos:definition>
+        <skos:definition xml:lang="en">This is an ontology used to specify parameter sets used by shacl infer process in dhPLUS.</skos:definition>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#object -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#object"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#subject -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"/>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples -->
+
+
+    <owl:ObjectProperty rdf:about="https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples">
+        <rdfs:domain rdf:resource="https://dh.plus.ac.at/parameter-ontology#ParameterSet"/>
+        <rdfs:range rdf:resource="https://dh.plus.ac.at/parameter-ontology#Statement"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2021-05-12</terms:created>
+        <terms:modified>2021-09-16+13:18</terms:modified>
+        <rdfs:label xml:lang="en">add additional Triples</rdfs:label>
+        <rdfs:label xml:lang="de">füge weitere Triple hinzu</rdfs:label>
+        <skos:definition xml:lang="en">Points to the statements of a parameter set.</skos:definition>
+        <skos:definition xml:lang="de">Zeigt auf die Statements eines Parametersatzes.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#authorityUri -->
+
+
+    <owl:ObjectProperty rdf:about="https://dh.plus.ac.at/parameter-ontology#authorityUri">
+        <rdfs:domain rdf:resource="https://dh.plus.ac.at/parameter-ontology#InstanceParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#dhpClass -->
+
+
+    <owl:ObjectProperty rdf:about="https://dh.plus.ac.at/parameter-ontology#dhpClass">
+        <rdfs:domain rdf:resource="https://dh.plus.ac.at/parameter-ontology#InstanceParameter"/>
+        <rdfs:range rdf:resource="https://dh.plus.ac.at/ontology#Entity"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2021-05-12</terms:created>
+        <terms:modified>2021-09-16+13:18</terms:modified>
+        <rdfs:label xml:lang="de">dhplus Ontologie Klasse</rdfs:label>
+        <rdfs:label xml:lang="en">dhplus ontology class</rdfs:label>
+        <skos:definition xml:lang="de">Uri einer dhplus Ontologie Klasse.</skos:definition>
+        <skos:definition xml:lang="en">Uri of a dhplus ontology class.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#dhpUri -->
+
+
+    <owl:ObjectProperty rdf:about="https://dh.plus.ac.at/parameter-ontology#dhpUri">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://dh.plus.ac.at/parameter-ontology#InstanceParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#hasParameter -->
+
+
+    <owl:ObjectProperty rdf:about="https://dh.plus.ac.at/parameter-ontology#hasParameter">
+        <rdfs:domain rdf:resource="https://dh.plus.ac.at/parameter-ontology#ParameterSet"/>
+        <rdfs:range rdf:resource="https://dh.plus.ac.at/parameter-ontology#Parameter"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2021-05-12</terms:created>
+        <terms:modified>2021-09-16+13:18</terms:modified>
+        <rdfs:label xml:lang="en">has parameter</rdfs:label>
+        <rdfs:label xml:lang="de">hat Parameter</rdfs:label>
+        <skos:definition xml:lang="en">Points to the parameters of a parameter set.</skos:definition>
+        <skos:definition xml:lang="de">Zeigt auf die Parameter eines Parametersatzes.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#object -->
+
+
+    <owl:ObjectProperty rdf:about="https://dh.plus.ac.at/parameter-ontology#object">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#object"/>
+        <rdfs:domain rdf:resource="https://dh.plus.ac.at/parameter-ontology#Statement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#predicate -->
+
+
+    <owl:ObjectProperty rdf:about="https://dh.plus.ac.at/parameter-ontology#predicate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate"/>
+        <rdfs:domain rdf:resource="https://dh.plus.ac.at/parameter-ontology#Statement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#subject -->
+
+
+    <owl:ObjectProperty rdf:about="https://dh.plus.ac.at/parameter-ontology#subject">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"/>
+        <rdfs:domain rdf:resource="https://dh.plus.ac.at/parameter-ontology#Statement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#addReificationStatements -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dh.plus.ac.at/parameter-ontology#addReificationStatements">
+        <rdfs:domain rdf:resource="https://dh.plus.ac.at/parameter-ontology#ParameterSet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2021-05-12</terms:created>
+        <terms:modified>2021-10-12+07:47</terms:modified>
+        <rdfs:label xml:lang="en">Add Reification Statements</rdfs:label>
+        <rdfs:label xml:lang="de">Reifizierungsanweisungen hinzufügen</rdfs:label>
+        <skos:definition xml:lang="en">If set, reification statements are generated to record the source of each triple.</skos:definition>
+        <skos:definition xml:lang="de">Wenn gesetzt, werden Reification-Statements generiert, um die Quelle zu jedem Triple zu dokumentieren.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#authorityUri -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dh.plus.ac.at/parameter-ontology#authorityUri">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#dhpUri -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dh.plus.ac.at/parameter-ontology#dhpUri">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#expandViaWikiData -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dh.plus.ac.at/parameter-ontology#expandViaWikiData">
+        <rdfs:domain rdf:resource="https://dh.plus.ac.at/parameter-ontology#ParameterSet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2021-05-12</terms:created>
+        <terms:modified>2021-09-16+13:18</terms:modified>
+        <rdfs:label xml:lang="de">erweitere über Wikidata</rdfs:label>
+        <rdfs:label xml:lang="en">expand via Wikidata</rdfs:label>
+        <skos:definition xml:lang="en">If set, further norm data is searched for via Wikidata and these are also taken into account during generation.</skos:definition>
+        <skos:definition xml:lang="de">Wenn gesetzt, wird nach weiteren Normdaten über Wikidata gesucht und diese werden ebenfalls bei der Generierung berücksichtigt.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#filterLanguage -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dh.plus.ac.at/parameter-ontology#filterLanguage">
+        <rdfs:domain rdf:resource="https://dh.plus.ac.at/parameter-ontology#ParameterSet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2021-05-12</terms:created>
+        <terms:modified>2021-09-16+13:18</terms:modified>
+        <rdfs:label xml:lang="de">Sprachfilter</rdfs:label>
+        <rdfs:label xml:lang="en">filter Language</rdfs:label>
+        <skos:definition xml:lang="en">If set, only literals of the matching language will be infered. Example: &apos;en,de&apos;</skos:definition>
+        <skos:definition xml:lang="de">Wenn gesetzt, werden nur Literale der passenden Sprache generiert. Beispiel: &apos;en,de&apos;</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#object -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dh.plus.ac.at/parameter-ontology#object">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#predicate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dh.plus.ac.at/parameter-ontology#predicate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#subject -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dh.plus.ac.at/parameter-ontology#subject">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+    
+
+
+    <!-- https://dh.plus.ac.at/ontology#Entity -->
+
+
+    <owl:Class rdf:about="https://dh.plus.ac.at/ontology#Entity"/>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#InputParameterSet -->
+
+
+    <owl:Class rdf:about="https://dh.plus.ac.at/parameter-ontology#InputParameterSet">
+        <rdfs:subClassOf rdf:resource="https://dh.plus.ac.at/parameter-ontology#ParameterSet"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2021-07-20</terms:created>
+        <terms:modified>2021-09-16+13:18</terms:modified>
+        <rdfs:label xml:lang="en">Input parameter set</rdfs:label>
+        <rdfs:label xml:lang="de">Parameterset Input</rdfs:label>
+        <skos:definition xml:lang="en">A set of parameters to be used as input.</skos:definition>
+        <skos:definition xml:lang="de">Ein Satz von Parametern, der als Input fungiert.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#InstanceParameter -->
+
+
+    <owl:Class rdf:about="https://dh.plus.ac.at/parameter-ontology#InstanceParameter">
+        <rdfs:subClassOf rdf:resource="https://dh.plus.ac.at/parameter-ontology#Parameter"/>
+        <rdfs:label xml:lang="en">Instance parameter</rdfs:label>
+        <rdfs:label xml:lang="de">Instanz Parameter</rdfs:label>
+        <skos:definition xml:lang="en">Class of an instance parameter, used to define the infer process of one instance.</skos:definition>
+        <skos:definition xml:lang="de">Klasse eines Instanzparameters, die verwendet wird, um den Generiegungsprozess einer Instanz zu definieren.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#OutputParameterSet -->
+
+
+    <owl:Class rdf:about="https://dh.plus.ac.at/parameter-ontology#OutputParameterSet">
+        <rdfs:subClassOf rdf:resource="https://dh.plus.ac.at/parameter-ontology#ParameterSet"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2021-05-12</terms:created>
+        <terms:modified>2021-09-16+13:18</terms:modified>
+        <rdfs:label xml:lang="en">Output parameter set</rdfs:label>
+        <rdfs:label xml:lang="de">Parameterset Output</rdfs:label>
+        <skos:definition xml:lang="en">A set of parameters generated by shacl processor to be used a next input.</skos:definition>
+        <skos:definition xml:lang="de">Ein Satz von Parametern generiert zum nächsten Input.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#Parameter -->
+
+
+    <owl:Class rdf:about="https://dh.plus.ac.at/parameter-ontology#Parameter">
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2021-05-12</terms:created>
+        <terms:modified>2021-09-16+13:18</terms:modified>
+        <rdfs:label xml:lang="de">Parameter</rdfs:label>
+        <rdfs:label xml:lang="en">Parameter</rdfs:label>
+        <skos:definition xml:lang="en">Class of a parameter.</skos:definition>
+        <skos:definition xml:lang="de">Klasse eines Parameters.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#ParameterSet -->
+
+
+    <owl:Class rdf:about="https://dh.plus.ac.at/parameter-ontology#ParameterSet">
+        <rdfs:label xml:lang="en">Parameter set</rdfs:label>
+        <rdfs:label xml:lang="de">Parameterset</rdfs:label>
+        <skos:definition xml:lang="en">A set of parameters.</skos:definition>
+        <skos:definition xml:lang="de">Ein Satz von Parametern.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://dh.plus.ac.at/parameter-ontology#Statement -->
+
+
+    <owl:Class rdf:about="https://dh.plus.ac.at/parameter-ontology#Statement">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2021-05-12</terms:created>
+        <terms:modified>2021-09-16+13:18</terms:modified>
+        <rdfs:label xml:lang="de">Statement</rdfs:label>
+        <rdfs:label xml:lang="en">Statement</rdfs:label>
+        <skos:definition xml:lang="en">Class of a statement.</skos:definition>
+        <skos:definition xml:lang="de">Klasse eines Statements.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://dh.plus.ac.at/parameter-ontology#authorityUri">
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2021-05-12</terms:created>
+        <terms:modified>2021-09-16+13:18</terms:modified>
+        <rdfs:label xml:lang="de">Authority Uri</rdfs:label>
+        <rdfs:label xml:lang="en">Authority Uri</rdfs:label>
+        <skos:definition xml:lang="de">Uri eines Normdatendatzes.</skos:definition>
+        <skos:definition xml:lang="en">Uri of an authority file.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://dh.plus.ac.at/parameter-ontology#dhpUri">
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2021-05-12</terms:created>
+        <terms:modified>2021-09-16+13:18</terms:modified>
+        <rdfs:label xml:lang="de">dhplus Uri</rdfs:label>
+        <rdfs:label xml:lang="en">dhplus uri</rdfs:label>
+        <skos:definition xml:lang="de">Uri der dhplus-Instanz, die generiert werden soll.</skos:definition>
+        <skos:definition xml:lang="en">Uri of the dhplus instance to infer.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://dh.plus.ac.at/parameter-ontology#object">
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2021-05-12</terms:created>
+        <terms:modified>2021-09-16+13:18</terms:modified>
+        <rdfs:label xml:lang="de">object</rdfs:label>
+        <rdfs:label xml:lang="en">object</rdfs:label>
+        <skos:definition xml:lang="de">object eines statement.</skos:definition>
+        <skos:definition xml:lang="en">object of a statement.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://dh.plus.ac.at/parameter-ontology#predicate">
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2021-05-12</terms:created>
+        <terms:modified>2021-09-16+13:18</terms:modified>
+        <rdfs:label xml:lang="de">predicate</rdfs:label>
+        <rdfs:label xml:lang="en">predicate</rdfs:label>
+        <skos:definition xml:lang="de">predicate eines statement.</skos:definition>
+        <skos:definition xml:lang="en">predicate of a statement.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://dh.plus.ac.at/parameter-ontology#subject">
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2021-05-12</terms:created>
+        <terms:modified>2021-09-16+13:18</terms:modified>
+        <rdfs:label xml:lang="de">subject</rdfs:label>
+        <rdfs:label xml:lang="en">subject</rdfs:label>
+        <skos:definition xml:lang="de">subject eines statement.</skos:definition>
+        <skos:definition xml:lang="en">subject of a statement.</skos:definition>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,13 @@
+parameter:addAdditionalTriples a owl:ObjectProperty ;
+    rdfs:label
+        "add additional Triples"@en ,
+        "füge weitere Triple hinzu"@de ;
+    skos:definition
+        "Points to the statements of a parameter set."@en ,
+        "Zeigt auf die Statements eines Parametersatzes."@de ;
+    rdfs:domain parameter:ParameterSet ;
+    rdfs:range parameter:Statement ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2021-05-12" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

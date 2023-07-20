@@ -1,0 +1,13 @@
+parameter:dhpClass a owl:ObjectProperty ;
+    rdfs:label
+        "dhplus ontology class"@en ,
+        "dhplus Ontologie Klasse"@de ;
+    skos:definition
+        "Uri of a dhplus ontology class."@en ,
+        "Uri einer dhplus Ontologie Klasse."@de ;
+    rdfs:domain parameter:InstanceParameter ;
+    rdfs:range dhpluso:Entity ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2021-05-12" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

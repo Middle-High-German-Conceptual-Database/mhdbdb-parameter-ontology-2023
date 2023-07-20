@@ -1,0 +1,13 @@
+parameter:addReificationStatements a owl:DatatypeProperty ;
+    rdfs:label
+        "Add Reification Statements"@en ,
+        "Reifizierungsanweisungen hinzufügen"@de ;
+    skos:definition
+        "If set, reification statements are generated to record the source of each triple."@en ,
+        "Wenn gesetzt, werden Reification-Statements generiert, um die Quelle zu jedem Triple zu dokumentieren."@de ;
+    rdfs:domain parameter:ParameterSet ;
+    rdfs:range xsd:boolean ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2021-05-12" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

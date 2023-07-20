@@ -1,0 +1,24 @@
+dhpluso:ValidationInstanceParameter a sh:NodeShape ;
+    sh:property [
+            sh:path parameter:authorityUri ;
+            sh:nodeKind sh:IRI ;
+            sh:maxCount 1 ;
+            sh:severity sh:Violation ;
+        ] ,
+        [
+            sh:path parameter:dhpUri ;
+            sh:nodeKind sh:IRI ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:severity sh:Violation ;
+        ] ,
+        [
+            sh:path parameter:dhpClass ;
+            sh:class owl:Class ;
+            sh:maxCount 1 ;
+            sh:severity sh:Violation ;
+        ] ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2021-09-09" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

@@ -1,0 +1,18 @@
+<https://dh.plus.ac.at/parameter-ontology> a owl:Ontology ;
+    rdfs:label
+        "dhPLUS SHACL Parameter Ontology"@en ,
+        "dhPLUS SHACL Parameter Ontologie"@de ;
+    dc:title
+        "dhPLUS SHACL Parameter Ontology"@en ,
+        "dhPLUS SHACL Parameter Ontologie"@de ;
+    skos:definition
+            "This is an ontology used to specify parameter sets used by shacl infer process in dhPLUS."@en ,
+            "Dies ist eine Ontologie, die verwendet wird, um Parametersätze zu spezifizieren, die vom shacl-Infer-Prozess in dhPLUS verwendet werden."@de ;
+    owl:versionInfo "0.1"^^xsd:string, "2021-05-12"^^xsd:date ;
+    owl:ontologyIRI <https://dh.plus.ac.at/parameter-ontology#> ;
+    owl:versionIRI <https://dh.plus.ac.at/parameter-ontology/0-1#> ;
+    dc:rights <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2021-05-12" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

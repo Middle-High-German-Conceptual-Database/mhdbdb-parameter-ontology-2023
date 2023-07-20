@@ -1,0 +1,307 @@
+<https://dh.plus.ac.at/parameter-ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://dh.plus.ac.at/parameter-ontology> <http://www.w3.org/2002/07/owl#versionIRI> <https://dh.plus.ac.at/parameter-ontology/0-1#> .
+<https://dh.plus.ac.at/parameter-ontology> <http://purl.org/dc/elements/1.1/creator> "Peter Hinkelmanns" .
+<https://dh.plus.ac.at/parameter-ontology> <http://purl.org/dc/elements/1.1/rights> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<https://dh.plus.ac.at/parameter-ontology> <http://purl.org/dc/elements/1.1/title> "dhPLUS SHACL Parameter Ontologie"@de .
+<https://dh.plus.ac.at/parameter-ontology> <http://purl.org/dc/elements/1.1/title> "dhPLUS SHACL Parameter Ontology"@en .
+<https://dh.plus.ac.at/parameter-ontology> <http://purl.org/dc/terms/created> "2021-05-12" .
+<https://dh.plus.ac.at/parameter-ontology> <http://purl.org/dc/terms/modified> "2021-09-16+13:18" .
+<https://dh.plus.ac.at/parameter-ontology> <http://www.w3.org/2000/01/rdf-schema#label> "dhPLUS SHACL Parameter Ontologie"@de .
+<https://dh.plus.ac.at/parameter-ontology> <http://www.w3.org/2000/01/rdf-schema#label> "dhPLUS SHACL Parameter Ontology"@en .
+<https://dh.plus.ac.at/parameter-ontology> <http://www.w3.org/2002/07/owl#versionInfo> "2021-05-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://dh.plus.ac.at/parameter-ontology> <http://www.w3.org/2002/07/owl#versionInfo> "0.1" .
+<https://dh.plus.ac.at/parameter-ontology> <http://www.w3.org/2004/02/skos/core#definition> "Dies ist eine Ontologie, die verwendet wird, um Parametersätze zu spezifizieren, die vom shacl-Infer-Prozess in dhPLUS verwendet werden."@de .
+<https://dh.plus.ac.at/parameter-ontology> <http://www.w3.org/2004/02/skos/core#definition> "This is an ontology used to specify parameter sets used by shacl infer process in dhPLUS."@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#object
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#subject
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples
+<https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dh.plus.ac.at/parameter-ontology#ParameterSet> .
+<https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples> <http://www.w3.org/2000/01/rdf-schema#range> <https://dh.plus.ac.at/parameter-ontology#Statement> .
+<https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples> <http://purl.org/dc/elements/1.1/creator> "Peter Hinkelmanns" .
+<https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples> <http://purl.org/dc/terms/created> "2021-05-12" .
+<https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples> <http://purl.org/dc/terms/modified> "2021-09-16+13:18" .
+<https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples> <http://www.w3.org/2000/01/rdf-schema#label> "add additional Triples"@en .
+<https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples> <http://www.w3.org/2000/01/rdf-schema#label> "füge weitere Triple hinzu"@de .
+<https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples> <http://www.w3.org/2004/02/skos/core#definition> "Points to the statements of a parameter set."@en .
+<https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples> <http://www.w3.org/2004/02/skos/core#definition> "Zeigt auf die Statements eines Parametersatzes."@de .
+# 
+# https://dh.plus.ac.at/parameter-ontology#authorityUri
+<https://dh.plus.ac.at/parameter-ontology#authorityUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dh.plus.ac.at/parameter-ontology#authorityUri> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dh.plus.ac.at/parameter-ontology#InstanceParameter> .
+# 
+# https://dh.plus.ac.at/parameter-ontology#dhpClass
+<https://dh.plus.ac.at/parameter-ontology#dhpClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dh.plus.ac.at/parameter-ontology#dhpClass> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dh.plus.ac.at/parameter-ontology#InstanceParameter> .
+<https://dh.plus.ac.at/parameter-ontology#dhpClass> <http://www.w3.org/2000/01/rdf-schema#range> <https://dh.plus.ac.at/ontology#Entity> .
+<https://dh.plus.ac.at/ontology#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dh.plus.ac.at/parameter-ontology#dhpClass> <http://purl.org/dc/elements/1.1/creator> "Peter Hinkelmanns" .
+<https://dh.plus.ac.at/parameter-ontology#dhpClass> <http://purl.org/dc/terms/created> "2021-05-12" .
+<https://dh.plus.ac.at/parameter-ontology#dhpClass> <http://purl.org/dc/terms/modified> "2021-09-16+13:18" .
+<https://dh.plus.ac.at/parameter-ontology#dhpClass> <http://www.w3.org/2000/01/rdf-schema#label> "dhplus Ontologie Klasse"@de .
+<https://dh.plus.ac.at/parameter-ontology#dhpClass> <http://www.w3.org/2000/01/rdf-schema#label> "dhplus ontology class"@en .
+<https://dh.plus.ac.at/parameter-ontology#dhpClass> <http://www.w3.org/2004/02/skos/core#definition> "Uri einer dhplus Ontologie Klasse."@de .
+<https://dh.plus.ac.at/parameter-ontology#dhpClass> <http://www.w3.org/2004/02/skos/core#definition> "Uri of a dhplus ontology class."@en .
+# 
+# https://dh.plus.ac.at/parameter-ontology#dhpUri
+<https://dh.plus.ac.at/parameter-ontology#dhpUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dh.plus.ac.at/parameter-ontology#dhpUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://dh.plus.ac.at/parameter-ontology#dhpUri> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dh.plus.ac.at/parameter-ontology#InstanceParameter> .
+# 
+# https://dh.plus.ac.at/parameter-ontology#hasParameter
+<https://dh.plus.ac.at/parameter-ontology#hasParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dh.plus.ac.at/parameter-ontology#hasParameter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dh.plus.ac.at/parameter-ontology#ParameterSet> .
+<https://dh.plus.ac.at/parameter-ontology#hasParameter> <http://www.w3.org/2000/01/rdf-schema#range> <https://dh.plus.ac.at/parameter-ontology#Parameter> .
+<https://dh.plus.ac.at/parameter-ontology#hasParameter> <http://purl.org/dc/elements/1.1/creator> "Peter Hinkelmanns" .
+<https://dh.plus.ac.at/parameter-ontology#hasParameter> <http://purl.org/dc/terms/created> "2021-05-12" .
+<https://dh.plus.ac.at/parameter-ontology#hasParameter> <http://purl.org/dc/terms/modified> "2021-09-16+13:18" .
+<https://dh.plus.ac.at/parameter-ontology#hasParameter> <http://www.w3.org/2000/01/rdf-schema#label> "has parameter"@en .
+<https://dh.plus.ac.at/parameter-ontology#hasParameter> <http://www.w3.org/2000/01/rdf-schema#label> "hat Parameter"@de .
+<https://dh.plus.ac.at/parameter-ontology#hasParameter> <http://www.w3.org/2004/02/skos/core#definition> "Points to the parameters of a parameter set."@en .
+<https://dh.plus.ac.at/parameter-ontology#hasParameter> <http://www.w3.org/2004/02/skos/core#definition> "Zeigt auf die Parameter eines Parametersatzes."@de .
+# 
+# https://dh.plus.ac.at/parameter-ontology#object
+<https://dh.plus.ac.at/parameter-ontology#object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dh.plus.ac.at/parameter-ontology#object> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> .
+<https://dh.plus.ac.at/parameter-ontology#object> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dh.plus.ac.at/parameter-ontology#Statement> .
+# 
+# https://dh.plus.ac.at/parameter-ontology#predicate
+<https://dh.plus.ac.at/parameter-ontology#predicate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dh.plus.ac.at/parameter-ontology#predicate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> .
+<https://dh.plus.ac.at/parameter-ontology#predicate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dh.plus.ac.at/parameter-ontology#Statement> .
+# 
+# https://dh.plus.ac.at/parameter-ontology#subject
+<https://dh.plus.ac.at/parameter-ontology#subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dh.plus.ac.at/parameter-ontology#subject> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> .
+<https://dh.plus.ac.at/parameter-ontology#subject> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dh.plus.ac.at/parameter-ontology#Statement> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://dh.plus.ac.at/parameter-ontology#addReificationStatements
+<https://dh.plus.ac.at/parameter-ontology#addReificationStatements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dh.plus.ac.at/parameter-ontology#addReificationStatements> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dh.plus.ac.at/parameter-ontology#ParameterSet> .
+<https://dh.plus.ac.at/parameter-ontology#addReificationStatements> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://dh.plus.ac.at/parameter-ontology#addReificationStatements> <http://purl.org/dc/elements/1.1/creator> "Peter Hinkelmanns" .
+<https://dh.plus.ac.at/parameter-ontology#addReificationStatements> <http://purl.org/dc/terms/created> "2021-05-12" .
+<https://dh.plus.ac.at/parameter-ontology#addReificationStatements> <http://purl.org/dc/terms/modified> "2021-10-12+07:47" .
+<https://dh.plus.ac.at/parameter-ontology#addReificationStatements> <http://www.w3.org/2000/01/rdf-schema#label> "Add Reification Statements"@en .
+<https://dh.plus.ac.at/parameter-ontology#addReificationStatements> <http://www.w3.org/2000/01/rdf-schema#label> "Reifizierungsanweisungen hinzufügen"@de .
+<https://dh.plus.ac.at/parameter-ontology#addReificationStatements> <http://www.w3.org/2004/02/skos/core#definition> "If set, reification statements are generated to record the source of each triple."@en .
+<https://dh.plus.ac.at/parameter-ontology#addReificationStatements> <http://www.w3.org/2004/02/skos/core#definition> "Wenn gesetzt, werden Reification-Statements generiert, um die Quelle zu jedem Triple zu dokumentieren."@de .
+# 
+# https://dh.plus.ac.at/parameter-ontology#authorityUri
+<https://dh.plus.ac.at/parameter-ontology#authorityUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dh.plus.ac.at/parameter-ontology#authorityUri> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# https://dh.plus.ac.at/parameter-ontology#dhpUri
+<https://dh.plus.ac.at/parameter-ontology#dhpUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dh.plus.ac.at/parameter-ontology#dhpUri> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# https://dh.plus.ac.at/parameter-ontology#expandViaWikiData
+<https://dh.plus.ac.at/parameter-ontology#expandViaWikiData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dh.plus.ac.at/parameter-ontology#expandViaWikiData> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dh.plus.ac.at/parameter-ontology#ParameterSet> .
+<https://dh.plus.ac.at/parameter-ontology#expandViaWikiData> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://dh.plus.ac.at/parameter-ontology#expandViaWikiData> <http://purl.org/dc/elements/1.1/creator> "Peter Hinkelmanns" .
+<https://dh.plus.ac.at/parameter-ontology#expandViaWikiData> <http://purl.org/dc/terms/created> "2021-05-12" .
+<https://dh.plus.ac.at/parameter-ontology#expandViaWikiData> <http://purl.org/dc/terms/modified> "2021-09-16+13:18" .
+<https://dh.plus.ac.at/parameter-ontology#expandViaWikiData> <http://www.w3.org/2000/01/rdf-schema#label> "erweitere über Wikidata"@de .
+<https://dh.plus.ac.at/parameter-ontology#expandViaWikiData> <http://www.w3.org/2000/01/rdf-schema#label> "expand via Wikidata"@en .
+<https://dh.plus.ac.at/parameter-ontology#expandViaWikiData> <http://www.w3.org/2004/02/skos/core#definition> "If set, further norm data is searched for via Wikidata and these are also taken into account during generation."@en .
+<https://dh.plus.ac.at/parameter-ontology#expandViaWikiData> <http://www.w3.org/2004/02/skos/core#definition> "Wenn gesetzt, wird nach weiteren Normdaten über Wikidata gesucht und diese werden ebenfalls bei der Generierung berücksichtigt."@de .
+# 
+# https://dh.plus.ac.at/parameter-ontology#filterLanguage
+<https://dh.plus.ac.at/parameter-ontology#filterLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dh.plus.ac.at/parameter-ontology#filterLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dh.plus.ac.at/parameter-ontology#ParameterSet> .
+<https://dh.plus.ac.at/parameter-ontology#filterLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://dh.plus.ac.at/parameter-ontology#filterLanguage> <http://purl.org/dc/elements/1.1/creator> "Peter Hinkelmanns" .
+<https://dh.plus.ac.at/parameter-ontology#filterLanguage> <http://purl.org/dc/terms/created> "2021-05-12" .
+<https://dh.plus.ac.at/parameter-ontology#filterLanguage> <http://purl.org/dc/terms/modified> "2021-09-16+13:18" .
+<https://dh.plus.ac.at/parameter-ontology#filterLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "Sprachfilter"@de .
+<https://dh.plus.ac.at/parameter-ontology#filterLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "filter Language"@en .
+<https://dh.plus.ac.at/parameter-ontology#filterLanguage> <http://www.w3.org/2004/02/skos/core#definition> "If set, only literals of the matching language will be infered. Example: 'en,de'"@en .
+<https://dh.plus.ac.at/parameter-ontology#filterLanguage> <http://www.w3.org/2004/02/skos/core#definition> "Wenn gesetzt, werden nur Literale der passenden Sprache generiert. Beispiel: 'en,de'"@de .
+# 
+# https://dh.plus.ac.at/parameter-ontology#object
+<https://dh.plus.ac.at/parameter-ontology#object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dh.plus.ac.at/parameter-ontology#object> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# https://dh.plus.ac.at/parameter-ontology#predicate
+<https://dh.plus.ac.at/parameter-ontology#predicate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dh.plus.ac.at/parameter-ontology#predicate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# https://dh.plus.ac.at/parameter-ontology#subject
+<https://dh.plus.ac.at/parameter-ontology#subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dh.plus.ac.at/parameter-ontology#subject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://dh.plus.ac.at/ontology#Entity
+# 
+# https://dh.plus.ac.at/parameter-ontology#InputParameterSet
+<https://dh.plus.ac.at/parameter-ontology#InputParameterSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dh.plus.ac.at/parameter-ontology#InputParameterSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dh.plus.ac.at/parameter-ontology#ParameterSet> .
+<https://dh.plus.ac.at/parameter-ontology#InputParameterSet> <http://purl.org/dc/elements/1.1/creator> "Peter Hinkelmanns" .
+<https://dh.plus.ac.at/parameter-ontology#InputParameterSet> <http://purl.org/dc/terms/created> "2021-07-20" .
+<https://dh.plus.ac.at/parameter-ontology#InputParameterSet> <http://purl.org/dc/terms/modified> "2021-09-16+13:18" .
+<https://dh.plus.ac.at/parameter-ontology#InputParameterSet> <http://www.w3.org/2000/01/rdf-schema#label> "Input parameter set"@en .
+<https://dh.plus.ac.at/parameter-ontology#InputParameterSet> <http://www.w3.org/2000/01/rdf-schema#label> "Parameterset Input"@de .
+<https://dh.plus.ac.at/parameter-ontology#InputParameterSet> <http://www.w3.org/2004/02/skos/core#definition> "A set of parameters to be used as input."@en .
+<https://dh.plus.ac.at/parameter-ontology#InputParameterSet> <http://www.w3.org/2004/02/skos/core#definition> "Ein Satz von Parametern, der als Input fungiert."@de .
+# 
+# https://dh.plus.ac.at/parameter-ontology#InstanceParameter
+<https://dh.plus.ac.at/parameter-ontology#InstanceParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dh.plus.ac.at/parameter-ontology#InstanceParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dh.plus.ac.at/parameter-ontology#Parameter> .
+<https://dh.plus.ac.at/parameter-ontology#InstanceParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Instance parameter"@en .
+<https://dh.plus.ac.at/parameter-ontology#InstanceParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Instanz Parameter"@de .
+<https://dh.plus.ac.at/parameter-ontology#InstanceParameter> <http://www.w3.org/2004/02/skos/core#definition> "Class of an instance parameter, used to define the infer process of one instance."@en .
+<https://dh.plus.ac.at/parameter-ontology#InstanceParameter> <http://www.w3.org/2004/02/skos/core#definition> "Klasse eines Instanzparameters, die verwendet wird, um den Generiegungsprozess einer Instanz zu definieren."@de .
+# 
+# https://dh.plus.ac.at/parameter-ontology#OutputParameterSet
+<https://dh.plus.ac.at/parameter-ontology#OutputParameterSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dh.plus.ac.at/parameter-ontology#OutputParameterSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dh.plus.ac.at/parameter-ontology#ParameterSet> .
+<https://dh.plus.ac.at/parameter-ontology#OutputParameterSet> <http://purl.org/dc/elements/1.1/creator> "Peter Hinkelmanns" .
+<https://dh.plus.ac.at/parameter-ontology#OutputParameterSet> <http://purl.org/dc/terms/created> "2021-05-12" .
+<https://dh.plus.ac.at/parameter-ontology#OutputParameterSet> <http://purl.org/dc/terms/modified> "2021-09-16+13:18" .
+<https://dh.plus.ac.at/parameter-ontology#OutputParameterSet> <http://www.w3.org/2000/01/rdf-schema#label> "Output parameter set"@en .
+<https://dh.plus.ac.at/parameter-ontology#OutputParameterSet> <http://www.w3.org/2000/01/rdf-schema#label> "Parameterset Output"@de .
+<https://dh.plus.ac.at/parameter-ontology#OutputParameterSet> <http://www.w3.org/2004/02/skos/core#definition> "A set of parameters generated by shacl processor to be used a next input."@en .
+<https://dh.plus.ac.at/parameter-ontology#OutputParameterSet> <http://www.w3.org/2004/02/skos/core#definition> "Ein Satz von Parametern generiert zum nächsten Input."@de .
+# 
+# https://dh.plus.ac.at/parameter-ontology#Parameter
+<https://dh.plus.ac.at/parameter-ontology#Parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dh.plus.ac.at/parameter-ontology#Parameter> <http://purl.org/dc/elements/1.1/creator> "Peter Hinkelmanns" .
+<https://dh.plus.ac.at/parameter-ontology#Parameter> <http://purl.org/dc/terms/created> "2021-05-12" .
+<https://dh.plus.ac.at/parameter-ontology#Parameter> <http://purl.org/dc/terms/modified> "2021-09-16+13:18" .
+<https://dh.plus.ac.at/parameter-ontology#Parameter> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter"@de .
+<https://dh.plus.ac.at/parameter-ontology#Parameter> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter"@en .
+<https://dh.plus.ac.at/parameter-ontology#Parameter> <http://www.w3.org/2004/02/skos/core#definition> "Class of a parameter."@en .
+<https://dh.plus.ac.at/parameter-ontology#Parameter> <http://www.w3.org/2004/02/skos/core#definition> "Klasse eines Parameters."@de .
+# 
+# https://dh.plus.ac.at/parameter-ontology#ParameterSet
+<https://dh.plus.ac.at/parameter-ontology#ParameterSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dh.plus.ac.at/parameter-ontology#ParameterSet> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter set"@en .
+<https://dh.plus.ac.at/parameter-ontology#ParameterSet> <http://www.w3.org/2000/01/rdf-schema#label> "Parameterset"@de .
+<https://dh.plus.ac.at/parameter-ontology#ParameterSet> <http://www.w3.org/2004/02/skos/core#definition> "A set of parameters."@en .
+<https://dh.plus.ac.at/parameter-ontology#ParameterSet> <http://www.w3.org/2004/02/skos/core#definition> "Ein Satz von Parametern."@de .
+# 
+# https://dh.plus.ac.at/parameter-ontology#Statement
+<https://dh.plus.ac.at/parameter-ontology#Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dh.plus.ac.at/parameter-ontology#Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<https://dh.plus.ac.at/parameter-ontology#Statement> <http://purl.org/dc/elements/1.1/creator> "Peter Hinkelmanns" .
+<https://dh.plus.ac.at/parameter-ontology#Statement> <http://purl.org/dc/terms/created> "2021-05-12" .
+<https://dh.plus.ac.at/parameter-ontology#Statement> <http://purl.org/dc/terms/modified> "2021-09-16+13:18" .
+<https://dh.plus.ac.at/parameter-ontology#Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Statement"@de .
+<https://dh.plus.ac.at/parameter-ontology#Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Statement"@en .
+<https://dh.plus.ac.at/parameter-ontology#Statement> <http://www.w3.org/2004/02/skos/core#definition> "Class of a statement."@en .
+<https://dh.plus.ac.at/parameter-ontology#Statement> <http://www.w3.org/2004/02/skos/core#definition> "Klasse eines Statements."@de .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://dh.plus.ac.at/parameter-ontology#authorityUri> <http://purl.org/dc/elements/1.1/creator> "Peter Hinkelmanns" .
+<https://dh.plus.ac.at/parameter-ontology#authorityUri> <http://purl.org/dc/terms/created> "2021-05-12" .
+<https://dh.plus.ac.at/parameter-ontology#authorityUri> <http://purl.org/dc/terms/modified> "2021-09-16+13:18" .
+<https://dh.plus.ac.at/parameter-ontology#authorityUri> <http://www.w3.org/2000/01/rdf-schema#label> "Authority Uri"@de .
+<https://dh.plus.ac.at/parameter-ontology#authorityUri> <http://www.w3.org/2000/01/rdf-schema#label> "Authority Uri"@en .
+<https://dh.plus.ac.at/parameter-ontology#authorityUri> <http://www.w3.org/2004/02/skos/core#definition> "Uri eines Normdatendatzes."@de .
+<https://dh.plus.ac.at/parameter-ontology#authorityUri> <http://www.w3.org/2004/02/skos/core#definition> "Uri of an authority file."@en .
+# 
+<https://dh.plus.ac.at/parameter-ontology#dhpUri> <http://purl.org/dc/elements/1.1/creator> "Peter Hinkelmanns" .
+<https://dh.plus.ac.at/parameter-ontology#dhpUri> <http://purl.org/dc/terms/created> "2021-05-12" .
+<https://dh.plus.ac.at/parameter-ontology#dhpUri> <http://purl.org/dc/terms/modified> "2021-09-16+13:18" .
+<https://dh.plus.ac.at/parameter-ontology#dhpUri> <http://www.w3.org/2000/01/rdf-schema#label> "dhplus Uri"@de .
+<https://dh.plus.ac.at/parameter-ontology#dhpUri> <http://www.w3.org/2000/01/rdf-schema#label> "dhplus uri"@en .
+<https://dh.plus.ac.at/parameter-ontology#dhpUri> <http://www.w3.org/2004/02/skos/core#definition> "Uri der dhplus-Instanz, die generiert werden soll."@de .
+<https://dh.plus.ac.at/parameter-ontology#dhpUri> <http://www.w3.org/2004/02/skos/core#definition> "Uri of the dhplus instance to infer."@en .
+# 
+<https://dh.plus.ac.at/parameter-ontology#object> <http://purl.org/dc/elements/1.1/creator> "Peter Hinkelmanns" .
+<https://dh.plus.ac.at/parameter-ontology#object> <http://purl.org/dc/terms/created> "2021-05-12" .
+<https://dh.plus.ac.at/parameter-ontology#object> <http://purl.org/dc/terms/modified> "2021-09-16+13:18" .
+<https://dh.plus.ac.at/parameter-ontology#object> <http://www.w3.org/2000/01/rdf-schema#label> "object"@de .
+<https://dh.plus.ac.at/parameter-ontology#object> <http://www.w3.org/2000/01/rdf-schema#label> "object"@en .
+<https://dh.plus.ac.at/parameter-ontology#object> <http://www.w3.org/2004/02/skos/core#definition> "object eines statement."@de .
+<https://dh.plus.ac.at/parameter-ontology#object> <http://www.w3.org/2004/02/skos/core#definition> "object of a statement."@en .
+# 
+<https://dh.plus.ac.at/parameter-ontology#predicate> <http://purl.org/dc/elements/1.1/creator> "Peter Hinkelmanns" .
+<https://dh.plus.ac.at/parameter-ontology#predicate> <http://purl.org/dc/terms/created> "2021-05-12" .
+<https://dh.plus.ac.at/parameter-ontology#predicate> <http://purl.org/dc/terms/modified> "2021-09-16+13:18" .
+<https://dh.plus.ac.at/parameter-ontology#predicate> <http://www.w3.org/2000/01/rdf-schema#label> "predicate"@de .
+<https://dh.plus.ac.at/parameter-ontology#predicate> <http://www.w3.org/2000/01/rdf-schema#label> "predicate"@en .
+<https://dh.plus.ac.at/parameter-ontology#predicate> <http://www.w3.org/2004/02/skos/core#definition> "predicate eines statement."@de .
+<https://dh.plus.ac.at/parameter-ontology#predicate> <http://www.w3.org/2004/02/skos/core#definition> "predicate of a statement."@en .
+# 
+<https://dh.plus.ac.at/parameter-ontology#subject> <http://purl.org/dc/elements/1.1/creator> "Peter Hinkelmanns" .
+<https://dh.plus.ac.at/parameter-ontology#subject> <http://purl.org/dc/terms/created> "2021-05-12" .
+<https://dh.plus.ac.at/parameter-ontology#subject> <http://purl.org/dc/terms/modified> "2021-09-16+13:18" .
+<https://dh.plus.ac.at/parameter-ontology#subject> <http://www.w3.org/2000/01/rdf-schema#label> "subject"@de .
+<https://dh.plus.ac.at/parameter-ontology#subject> <http://www.w3.org/2000/01/rdf-schema#label> "subject"@en .
+<https://dh.plus.ac.at/parameter-ontology#subject> <http://www.w3.org/2004/02/skos/core#definition> "subject eines statement."@de .
+<https://dh.plus.ac.at/parameter-ontology#subject> <http://www.w3.org/2004/02/skos/core#definition> "subject of a statement."@en .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

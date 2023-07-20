@@ -1,0 +1,13 @@
+parameter:filterLanguage a owl:DatatypeProperty ;
+    rdfs:label
+        "filter Language"@en ,
+        "Sprachfilter"@de ;
+    skos:definition
+        "If set, only literals of the matching language will be infered. Example: 'en,de'"@en ,
+        "Wenn gesetzt, werden nur Literale der passenden Sprache generiert. Beispiel: 'en,de'"@de ;
+    rdfs:domain parameter:ParameterSet ;
+    rdfs:range xsd:string ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2021-05-12" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

@@ -1,0 +1,13 @@
+parameter:authorityUri a owl:ObjectProperty ;
+    rdfs:label
+        "Authority Uri"@en ,
+        "Authority Uri"@de ;
+    skos:definition
+        "Uri of an authority file."@en ,
+        "Uri eines Normdatendatzes."@de ;
+    rdfs:domain parameter:InstanceParameter ;
+    rdfs:range xsd:anyURI ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2021-05-12" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

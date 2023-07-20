@@ -1,0 +1,14 @@
+parameter:predicate a owl:ObjectProperty ;
+    rdfs:label
+        "predicate"@en ,
+        "predicate"@de ;
+    skos:definition
+        "predicate of a statement."@en ,
+        "predicate eines statement."@de ;
+    rdfs:domain parameter:Statement ;
+    rdfs:range xsd:anyURI ;
+    rdfs:subPropertyOf rdf:predicate ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2021-05-12" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

@@ -1,0 +1,13 @@
+parameter:expandViaWikiData a owl:DatatypeProperty ;
+    rdfs:label
+        "expand via Wikidata"@en ,
+        "erweitere über Wikidata"@de ;
+    skos:definition
+        "If set, further norm data is searched for via Wikidata and these are also taken into account during generation."@en ,
+        "Wenn gesetzt, wird nach weiteren Normdaten über Wikidata gesucht und diese werden ebenfalls bei der Generierung berücksichtigt."@de ;
+    rdfs:domain parameter:ParameterSet ;
+    rdfs:range xsd:boolean ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2021-05-12" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

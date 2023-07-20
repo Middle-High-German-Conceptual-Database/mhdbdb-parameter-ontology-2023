@@ -1,0 +1,8 @@
+parameter:ParameterSet a owl:Class ;
+    rdfs:label
+        "Parameter set"@en ,
+        "Parameterset"@de ;
+    skos:definition
+        "A set of parameters."@en ,
+        "Ein Satz von Parametern."@de ;
+.

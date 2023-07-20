@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>dhPLUS SHACL Parameter Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://dh.plus.ac.at/parameter-ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://dh.plus.ac.at/parameter-ontology","name":"dhPLUS SHACL Parameter Ontology", "headline":"Document describing the ontology https://dh.plus.ac.at/parameter-ontology", "datePublished":"2021-09-16+13:18", "version":"0.1", "license":"https://creativecommons.org/publicdomain/zero/1.0/", "author":[{"@type":"Person","name":"Peter Hinkelmanns"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-de.html"><b>de</b></a> <a href="index-en.html"><b>en</b></a> </div>
+<h1>dhPLUS SHACL Parameter Ontology</h1>
+<h2>Release  2021-09-16+13:18</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="https://dh.plus.ac.at/parameter-ontology/0-1#">https://dh.plus.ac.at/parameter-ontology/0-1#</a></dd>
+<dt>Revision:</dt>
+<dd>0.1</dd>
+<dt>Authors:</dt>
+<dd>Peter Hinkelmanns</dd>
+
+<dt>License: </dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/publicdomain/zero/1.0/-blue.svg" alt="https://creativecommons.org/publicdomain/zero/1.0/" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Peter Hinkelmanns. dhPLUS SHACL Parameter Ontology. Revision: 0.1. Retrieved from: https://dh.plus.ac.at/parameter-ontology/0-1#</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a place holder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">dhPLUS SHACL Parameter Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#InputParameterSet"
+         title="https://dh.plus.ac.at/parameter-ontology#InputParameterSet">Input parameter set</a>
+   </li>
+   <li>
+      <a href="#InstanceParameter"
+         title="https://dh.plus.ac.at/parameter-ontology#InstanceParameter">Instance parameter</a>
+   </li>
+   <li>
+      <a href="#OutputParameterSet"
+         title="https://dh.plus.ac.at/parameter-ontology#OutputParameterSet">Output parameter set</a>
+   </li>
+   <li>
+      <a href="#Parameter"
+         title="https://dh.plus.ac.at/parameter-ontology#Parameter">Parameter</a>
+   </li>
+   <li>
+      <a href="#ParameterSet"
+         title="https://dh.plus.ac.at/parameter-ontology#ParameterSet">Parameter set</a>
+   </li>
+   <li>
+      <a href="#Statement"
+         title="https://dh.plus.ac.at/parameter-ontology#Statement">Statement</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#addAdditionalTriples"
+         title="https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples">add additional Triples</a>
+   </li>
+   <li>
+      <a href="#authorityUri"
+         title="https://dh.plus.ac.at/parameter-ontology#authorityUri">
+         <span>Authority Uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#dhpClass"
+         title="https://dh.plus.ac.at/parameter-ontology#dhpClass">dhplus ontology class</a>
+   </li>
+   <li>
+      <a href="#dhpUri" title="https://dh.plus.ac.at/parameter-ontology#dhpUri">
+         <span>dhplus uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasParameter"
+         title="https://dh.plus.ac.at/parameter-ontology#hasParameter">has parameter</a>
+   </li>
+   <li>
+      <a href="#object" title="https://dh.plus.ac.at/parameter-ontology#object">
+         <span>object</span>
+      </a>
+   </li>
+   <li>
+      <a href="#predicate"
+         title="https://dh.plus.ac.at/parameter-ontology#predicate">
+         <span>predicate</span>
+      </a>
+   </li>
+   <li>
+      <a href="#subject" title="https://dh.plus.ac.at/parameter-ontology#subject">
+         <span>subject</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#addReificationStatements"
+         title="https://dh.plus.ac.at/parameter-ontology#addReificationStatements">Add Reification Statements</a>
+   </li>
+   <li>
+      <a href="#authorityUri"
+         title="https://dh.plus.ac.at/parameter-ontology#authorityUri">
+         <span>Authority Uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#dhpUri" title="https://dh.plus.ac.at/parameter-ontology#dhpUri">
+         <span>dhplus uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#expandViaWikiData"
+         title="https://dh.plus.ac.at/parameter-ontology#expandViaWikiData">expand via Wikidata</a>
+   </li>
+   <li>
+      <a href="#filterLanguage"
+         title="https://dh.plus.ac.at/parameter-ontology#filterLanguage">filter Language</a>
+   </li>
+   <li>
+      <a href="#object" title="https://dh.plus.ac.at/parameter-ontology#object">
+         <span>object</span>
+      </a>
+   </li>
+   <li>
+      <a href="#predicate"
+         title="https://dh.plus.ac.at/parameter-ontology#predicate">
+         <span>predicate</span>
+      </a>
+   </li>
+   <li>
+      <a href="#subject" title="https://dh.plus.ac.at/parameter-ontology#subject">
+         <span>subject</span>
+      </a>
+   </li>
+</ul>
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">dhPLUS SHACL Parameter Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for dhPLUS SHACL Parameter Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by dhPLUS SHACL Parameter Ontology.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#InputParameterSet"
+            title="https://dh.plus.ac.at/parameter-ontology#InputParameterSet">Input parameter set</a>
+      </li>
+      <li>
+         <a href="#InstanceParameter"
+            title="https://dh.plus.ac.at/parameter-ontology#InstanceParameter">Instance parameter</a>
+      </li>
+      <li>
+         <a href="#OutputParameterSet"
+            title="https://dh.plus.ac.at/parameter-ontology#OutputParameterSet">Output parameter set</a>
+      </li>
+      <li>
+         <a href="#Parameter"
+            title="https://dh.plus.ac.at/parameter-ontology#Parameter">Parameter</a>
+      </li>
+      <li>
+         <a href="#ParameterSet"
+            title="https://dh.plus.ac.at/parameter-ontology#ParameterSet">Parameter set</a>
+      </li>
+      <li>
+         <a href="#Statement"
+            title="https://dh.plus.ac.at/parameter-ontology#Statement">Statement</a>
+      </li>
+   </ul>
+   <div class="entity" id="InputParameterSet">
+      <h3>Input parameter set<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#InputParameterSet</p>
+      <div class="comment">
+         <span class="markdown">A set of parameters to be used as input.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ParameterSet"
+               title="https://dh.plus.ac.at/parameter-ontology#ParameterSet">Parameter set</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="InstanceParameter">
+      <h3>Instance parameter<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#InstanceParameter</p>
+      <div class="comment">
+         <span class="markdown">Class of an instance parameter, used to define the infer process of one instance.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Parameter"
+               title="https://dh.plus.ac.at/parameter-ontology#Parameter">Parameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#authorityUri"
+               title="https://dh.plus.ac.at/parameter-ontology#authorityUri">Authority Uri</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#dhpClass"
+               title="https://dh.plus.ac.at/parameter-ontology#dhpClass">dhplus ontology class</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#dhpUri" title="https://dh.plus.ac.at/parameter-ontology#dhpUri">dhplus uri</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OutputParameterSet">
+      <h3>Output parameter set<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#OutputParameterSet</p>
+      <div class="comment">
+         <span class="markdown">A set of parameters generated by shacl processor to be used a next input.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ParameterSet"
+               title="https://dh.plus.ac.at/parameter-ontology#ParameterSet">Parameter set</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Parameter">
+      <h3>Parameter<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#Parameter</p>
+      <div class="comment">
+         <span class="markdown">Class of a parameter.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#InstanceParameter"
+               title="https://dh.plus.ac.at/parameter-ontology#InstanceParameter">Instance parameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasParameter"
+               title="https://dh.plus.ac.at/parameter-ontology#hasParameter">has parameter</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ParameterSet">
+      <h3>Parameter set<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#ParameterSet</p>
+      <div class="comment">
+         <span class="markdown">A set of parameters.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#InputParameterSet"
+               title="https://dh.plus.ac.at/parameter-ontology#InputParameterSet">Input parameter set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#OutputParameterSet"
+               title="https://dh.plus.ac.at/parameter-ontology#OutputParameterSet">Output parameter set</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#addReificationStatements"
+               title="https://dh.plus.ac.at/parameter-ontology#addReificationStatements">Add Reification Statements</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#addAdditionalTriples"
+               title="https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples">add additional Triples</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#expandViaWikiData"
+               title="https://dh.plus.ac.at/parameter-ontology#expandViaWikiData">expand via Wikidata</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#filterLanguage"
+               title="https://dh.plus.ac.at/parameter-ontology#filterLanguage">filter Language</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasParameter"
+               title="https://dh.plus.ac.at/parameter-ontology#hasParameter">has parameter</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Statement">
+      <h3>Statement<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#Statement</p>
+      <div class="comment">
+         <span class="markdown">Class of a statement.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+               target="_blank"
+               title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">statement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#object" title="https://dh.plus.ac.at/parameter-ontology#object">object</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#predicate"
+               title="https://dh.plus.ac.at/parameter-ontology#predicate">predicate</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#subject" title="https://dh.plus.ac.at/parameter-ontology#subject">subject</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#addAdditionalTriples"
+               title="https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples">add additional Triples</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#addAdditionalTriples"
+            title="https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples">add additional Triples</a>
+      </li>
+      <li>
+         <a href="#authorityUri"
+            title="https://dh.plus.ac.at/parameter-ontology#authorityUri">
+            <span>Authority Uri</span>
+         </a>
+      </li>
+      <li>
+         <a href="#dhpClass"
+            title="https://dh.plus.ac.at/parameter-ontology#dhpClass">dhplus ontology class</a>
+      </li>
+      <li>
+         <a href="#dhpUri" title="https://dh.plus.ac.at/parameter-ontology#dhpUri">
+            <span>dhplus uri</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasParameter"
+            title="https://dh.plus.ac.at/parameter-ontology#hasParameter">has parameter</a>
+      </li>
+      <li>
+         <a href="#object" title="https://dh.plus.ac.at/parameter-ontology#object">
+            <span>object</span>
+         </a>
+      </li>
+      <li>
+         <a href="#predicate"
+            title="https://dh.plus.ac.at/parameter-ontology#predicate">
+            <span>predicate</span>
+         </a>
+      </li>
+      <li>
+         <a href="#subject" title="https://dh.plus.ac.at/parameter-ontology#subject">
+            <span>subject</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="addAdditionalTriples">
+      <h3>add additional Triples<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples</p>
+      <div class="comment">
+         <span class="markdown">Points to the statements of a parameter set.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ParameterSet"
+                  title="https://dh.plus.ac.at/parameter-ontology#ParameterSet">Parameter set</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Statement"
+                  title="https://dh.plus.ac.at/parameter-ontology#Statement">Statement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="authorityUri">
+      <h3>Authority Uri<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#authorityUri</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#InstanceParameter"
+                  title="https://dh.plus.ac.at/parameter-ontology#InstanceParameter">Instance parameter</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#authorityUri">data property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="dhpClass">
+      <h3>dhplus ontology class<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#dhpClass</p>
+      <div class="comment">
+         <span class="markdown">Uri of a dhplus ontology class.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#InstanceParameter"
+                  title="https://dh.plus.ac.at/parameter-ontology#InstanceParameter">Instance parameter</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://dh.plus.ac.at/ontology#Entity"
+                  target="_blank"
+                  title="https://dh.plus.ac.at/ontology#Entity">entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="dhpUri">
+      <h3>dhplus uri<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#dhpUri</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#InstanceParameter"
+                  title="https://dh.plus.ac.at/parameter-ontology#InstanceParameter">Instance parameter</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#dhpUri">data property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasParameter">
+      <h3>has parameter<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#hasParameter</p>
+      <div class="comment">
+         <span class="markdown">Points to the parameters of a parameter set.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ParameterSet"
+                  title="https://dh.plus.ac.at/parameter-ontology#ParameterSet">Parameter set</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Parameter"
+                  title="https://dh.plus.ac.at/parameter-ontology#Parameter">Parameter</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="object">
+      <h3>object<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#object</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+                  target="_blank"
+                  title="http://www.w3.org/1999/02/22-rdf-syntax-ns#object">object</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Statement"
+                  title="https://dh.plus.ac.at/parameter-ontology#Statement">Statement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#object">data property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="predicate">
+      <h3>predicate<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#predicate</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate"
+                  target="_blank"
+                  title="http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate">predicate</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Statement"
+                  title="https://dh.plus.ac.at/parameter-ontology#Statement">Statement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#predicate">data property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="subject">
+      <h3>subject<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#subject</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"
+                  target="_blank"
+                  title="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject">subject</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Statement"
+                  title="https://dh.plus.ac.at/parameter-ontology#Statement">Statement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#subject">data property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#addReificationStatements"
+            title="https://dh.plus.ac.at/parameter-ontology#addReificationStatements">Add Reification Statements</a>
+      </li>
+      <li>
+         <a href="#authorityUri"
+            title="https://dh.plus.ac.at/parameter-ontology#authorityUri">
+            <span>Authority Uri</span>
+         </a>
+      </li>
+      <li>
+         <a href="#dhpUri" title="https://dh.plus.ac.at/parameter-ontology#dhpUri">
+            <span>dhplus uri</span>
+         </a>
+      </li>
+      <li>
+         <a href="#expandViaWikiData"
+            title="https://dh.plus.ac.at/parameter-ontology#expandViaWikiData">expand via Wikidata</a>
+      </li>
+      <li>
+         <a href="#filterLanguage"
+            title="https://dh.plus.ac.at/parameter-ontology#filterLanguage">filter Language</a>
+      </li>
+      <li>
+         <a href="#object" title="https://dh.plus.ac.at/parameter-ontology#object">
+            <span>object</span>
+         </a>
+      </li>
+      <li>
+         <a href="#predicate"
+            title="https://dh.plus.ac.at/parameter-ontology#predicate">
+            <span>predicate</span>
+         </a>
+      </li>
+      <li>
+         <a href="#subject" title="https://dh.plus.ac.at/parameter-ontology#subject">
+            <span>subject</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="addReificationStatements">
+      <h3>Add Reification Statements<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#addReificationStatements</p>
+      <div class="comment">
+         <span class="markdown">If set, reification statements are generated to record the source of each triple.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ParameterSet"
+                  title="https://dh.plus.ac.at/parameter-ontology#ParameterSet">Parameter set</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="authorityUri">
+      <h3>Authority Uri<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#authorityUri</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#authorityUri">object property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="dhpUri">
+      <h3>dhplus uri<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#dhpUri</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#dhpUri">object property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="expandViaWikiData">
+      <h3>expand via Wikidata<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#expandViaWikiData</p>
+      <div class="comment">
+         <span class="markdown">If set, further norm data is searched for via Wikidata and these are also taken into account during generation.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ParameterSet"
+                  title="https://dh.plus.ac.at/parameter-ontology#ParameterSet">Parameter set</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="filterLanguage">
+      <h3>filter Language<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#filterLanguage</p>
+      <div class="comment">
+         <span class="markdown">If set, only literals of the matching language will be infered. Example: 'en,de'</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ParameterSet"
+                  title="https://dh.plus.ac.at/parameter-ontology#ParameterSet">Parameter set</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="object">
+      <h3>object<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#object</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#object">object property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="predicate">
+      <h3>predicate<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#predicate</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#predicate">object property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="subject">
+      <h3>subject<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://dh.plus.ac.at/parameter-ontology#subject</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#subject">object property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

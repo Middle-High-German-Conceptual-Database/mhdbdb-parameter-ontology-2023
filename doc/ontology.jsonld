@@ -1,0 +1,590 @@
+[ {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/rights",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dh.plus.ac.at/ontology#Entity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/elements/1.1/rights" : [ {
+    "@id" : "https://creativecommons.org/publicdomain/zero/1.0/"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@language" : "de",
+    "@value" : "dhPLUS SHACL Parameter Ontologie"
+  }, {
+    "@language" : "en",
+    "@value" : "dhPLUS SHACL Parameter Ontology"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2021-05-12"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2021-09-16+13:18"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "dhPLUS SHACL Parameter Ontologie"
+  }, {
+    "@language" : "en",
+    "@value" : "dhPLUS SHACL Parameter Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://dh.plus.ac.at/parameter-ontology/0-1#"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2021-05-12"
+  }, {
+    "@value" : "0.1"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Dies ist eine Ontologie, die verwendet wird, um Parametersätze zu spezifizieren, die vom shacl-Infer-Prozess in dhPLUS verwendet werden."
+  }, {
+    "@language" : "en",
+    "@value" : "This is an ontology used to specify parameter sets used by shacl infer process in dhPLUS."
+  } ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology#InputParameterSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2021-07-20"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2021-09-16+13:18"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Input parameter set"
+  }, {
+    "@language" : "de",
+    "@value" : "Parameterset Input"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dh.plus.ac.at/parameter-ontology#ParameterSet"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A set of parameters to be used as input."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Satz von Parametern, der als Input fungiert."
+  } ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology#InstanceParameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Instance parameter"
+  }, {
+    "@language" : "de",
+    "@value" : "Instanz Parameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dh.plus.ac.at/parameter-ontology#Parameter"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Class of an instance parameter, used to define the infer process of one instance."
+  }, {
+    "@language" : "de",
+    "@value" : "Klasse eines Instanzparameters, die verwendet wird, um den Generiegungsprozess einer Instanz zu definieren."
+  } ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology#OutputParameterSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2021-05-12"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2021-09-16+13:18"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Output parameter set"
+  }, {
+    "@language" : "de",
+    "@value" : "Parameterset Output"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dh.plus.ac.at/parameter-ontology#ParameterSet"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A set of parameters generated by shacl processor to be used a next input."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Satz von Parametern generiert zum nächsten Input."
+  } ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology#Parameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2021-05-12"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2021-09-16+13:18"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Parameter"
+  }, {
+    "@language" : "en",
+    "@value" : "Parameter"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Class of a parameter."
+  }, {
+    "@language" : "de",
+    "@value" : "Klasse eines Parameters."
+  } ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology#ParameterSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Parameter set"
+  }, {
+    "@language" : "de",
+    "@value" : "Parameterset"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A set of parameters."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Satz von Parametern."
+  } ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology#Statement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2021-05-12"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2021-09-16+13:18"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Statement"
+  }, {
+    "@language" : "en",
+    "@value" : "Statement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Class of a statement."
+  }, {
+    "@language" : "de",
+    "@value" : "Klasse eines Statements."
+  } ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology#addAdditionalTriples",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2021-05-12"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2021-09-16+13:18"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dh.plus.ac.at/parameter-ontology#ParameterSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "add additional Triples"
+  }, {
+    "@language" : "de",
+    "@value" : "füge weitere Triple hinzu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dh.plus.ac.at/parameter-ontology#Statement"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Points to the statements of a parameter set."
+  }, {
+    "@language" : "de",
+    "@value" : "Zeigt auf die Statements eines Parametersatzes."
+  } ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology#addReificationStatements",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2021-05-12"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2021-10-12+07:47"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dh.plus.ac.at/parameter-ontology#ParameterSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Add Reification Statements"
+  }, {
+    "@language" : "de",
+    "@value" : "Reifizierungsanweisungen hinzufügen"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "If set, reification statements are generated to record the source of each triple."
+  }, {
+    "@language" : "de",
+    "@value" : "Wenn gesetzt, werden Reification-Statements generiert, um die Quelle zu jedem Triple zu dokumentieren."
+  } ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology#authorityUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2021-05-12"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2021-09-16+13:18"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dh.plus.ac.at/parameter-ontology#InstanceParameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Authority Uri"
+  }, {
+    "@language" : "en",
+    "@value" : "Authority Uri"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Uri eines Normdatendatzes."
+  }, {
+    "@language" : "en",
+    "@value" : "Uri of an authority file."
+  } ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology#dhpClass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2021-05-12"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2021-09-16+13:18"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dh.plus.ac.at/parameter-ontology#InstanceParameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "dhplus Ontologie Klasse"
+  }, {
+    "@language" : "en",
+    "@value" : "dhplus ontology class"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dh.plus.ac.at/ontology#Entity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Uri einer dhplus Ontologie Klasse."
+  }, {
+    "@language" : "en",
+    "@value" : "Uri of a dhplus ontology class."
+  } ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology#dhpUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2021-05-12"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2021-09-16+13:18"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dh.plus.ac.at/parameter-ontology#InstanceParameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "dhplus Uri"
+  }, {
+    "@language" : "en",
+    "@value" : "dhplus uri"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Uri der dhplus-Instanz, die generiert werden soll."
+  }, {
+    "@language" : "en",
+    "@value" : "Uri of the dhplus instance to infer."
+  } ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology#expandViaWikiData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2021-05-12"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2021-09-16+13:18"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dh.plus.ac.at/parameter-ontology#ParameterSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "erweitere über Wikidata"
+  }, {
+    "@language" : "en",
+    "@value" : "expand via Wikidata"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "If set, further norm data is searched for via Wikidata and these are also taken into account during generation."
+  }, {
+    "@language" : "de",
+    "@value" : "Wenn gesetzt, wird nach weiteren Normdaten über Wikidata gesucht und diese werden ebenfalls bei der Generierung berücksichtigt."
+  } ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology#filterLanguage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2021-05-12"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2021-09-16+13:18"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dh.plus.ac.at/parameter-ontology#ParameterSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Sprachfilter"
+  }, {
+    "@language" : "en",
+    "@value" : "filter Language"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "If set, only literals of the matching language will be infered. Example: 'en,de'"
+  }, {
+    "@language" : "de",
+    "@value" : "Wenn gesetzt, werden nur Literale der passenden Sprache generiert. Beispiel: 'en,de'"
+  } ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology#hasParameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2021-05-12"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2021-09-16+13:18"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dh.plus.ac.at/parameter-ontology#ParameterSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has parameter"
+  }, {
+    "@language" : "de",
+    "@value" : "hat Parameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dh.plus.ac.at/parameter-ontology#Parameter"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Points to the parameters of a parameter set."
+  }, {
+    "@language" : "de",
+    "@value" : "Zeigt auf die Parameter eines Parametersatzes."
+  } ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology#object",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2021-05-12"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2021-09-16+13:18"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dh.plus.ac.at/parameter-ontology#Statement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "object"
+  }, {
+    "@language" : "en",
+    "@value" : "object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "object eines statement."
+  }, {
+    "@language" : "en",
+    "@value" : "object of a statement."
+  } ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology#predicate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2021-05-12"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2021-09-16+13:18"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dh.plus.ac.at/parameter-ontology#Statement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "predicate"
+  }, {
+    "@language" : "en",
+    "@value" : "predicate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "predicate eines statement."
+  }, {
+    "@language" : "en",
+    "@value" : "predicate of a statement."
+  } ]
+}, {
+  "@id" : "https://dh.plus.ac.at/parameter-ontology#subject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2021-05-12"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2021-09-16+13:18"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dh.plus.ac.at/parameter-ontology#Statement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "subject"
+  }, {
+    "@language" : "en",
+    "@value" : "subject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "subject eines statement."
+  }, {
+    "@language" : "en",
+    "@value" : "subject of a statement."
+  } ]
+} ]

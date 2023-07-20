@@ -1,0 +1,11 @@
+parameter:Parameter a owl:Class ;
+    rdfs:label
+        "Parameter"@en ,
+        "Parameter"@de ;
+    skos:definition
+        "Class of a parameter."@en ,
+        "Klasse eines Parameters."@de ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2021-05-12" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

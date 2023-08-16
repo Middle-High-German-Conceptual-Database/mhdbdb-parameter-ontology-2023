@@ -1,6 +1,6 @@
-# dhPLUS Parameter Ontology
+# MHDBDB Parameter Ontology
 
-This directory contains all sources of the dhPLUS Parameter Ontology. 
+This directory contains all sources of the MHDBDB Parameter Ontology. 
 
 ## Template Usage
 
